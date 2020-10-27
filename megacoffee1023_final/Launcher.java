@@ -70,7 +70,7 @@ public class Launcher { //주문, 결제 메소드 모음
 				if (checkPW == member.getPw()) {
 					System.out.println("\n" + member.getId() + " 회원님의 적립 현황입니다. ");
 					System.out.println("적립된 스탬프는 " + menu1.getStamp() + "개입니다. ");
-					if (menu1.getStamp()>=3 || menu1.getStamp()%3 == 0) {//쿠폰 있을 때 
+					if (menu1.getStamp()>=3) {//쿠폰 있을 때 
 						System.out.println("쿠폰이 " + (menu1.getStamp()/3) + "개 생성되었습니다. ");
 					} else { //쿠폰 없을 때 
 						System.out.println("생성된 쿠폰이 없습니다. ");
