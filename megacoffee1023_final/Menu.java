@@ -81,16 +81,10 @@ public class Menu { //메뉴 추가, 출력
 	int choicecount;
 
 	public void coffeemenu() {//커피 배열에 메뉴 저장
-		for (int i=0; i<coffee.length; i++) {
-			if (i == 0) 
-				coffee[i] = new Coffee("핫 아메리카노" , 1500);
-			if (i == 1) 
-				coffee[i] = new Coffee("아이스아메리카노", 2000);
-			if (i == 2)
-				coffee[i] = new Coffee("카페  모카", 2500);
-			if (i == 3)
-				coffee[i] = new Coffee("카라멜 마끼아또", 3000);
-		}
+		coffee[0] = new Coffee("핫 아메리카노" , 1500);
+		coffee[1] = new Coffee("아이스아메리카노", 2000);
+		coffee[2] = new Coffee("카페  모카", 2500);
+		coffee[3] = new Coffee("카라멜 마끼아또", 3000);
 	}
 	
 	public void getcoffee(){//커피 메뉴 출력 
@@ -101,12 +95,8 @@ public class Menu { //메뉴 추가, 출력
 	}
 
 	public void smoothiemenu() {//스무디 배열에 메뉴 저장
-		for (int i=0; i<smoothie.length; i++) {
-			if(i == 0)
-				smoothie[i] = new Smoothie("요거트 스무디", 3500);
-			if(i == 1)
-				smoothie[i] = new Smoothie("딸기 스무디", 4000);
-		}
+		smoothie[0] = new Smoothie("요거트 스무디", 3500);
+		smoothie[1] = new Smoothie("딸기 스무디", 4000);
 	}
 
 	public void getsmoothie() {//스무디 메뉴 출력
@@ -117,12 +107,9 @@ public class Menu { //메뉴 추가, 출력
 	}
 
 	public void cakemenu() {//사이드 배열에 메뉴 저장
-		for (int i=0; i<cake.length; i++) {
-			if(i == 0) 
-				cake[i] = new Cake("치즈 케이크", 5000);
-			if(i == 1)
-				cake[i] = new Cake("초코 케이크", 5000);
-		}
+
+		cake[0] = new Cake("치즈 케이크", 5000);
+		cake[1] = new Cake("초코 케이크", 5000);
 	}
 
 	public void getcake() {//사이드 메뉴 출력
