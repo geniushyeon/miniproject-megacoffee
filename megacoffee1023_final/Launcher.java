@@ -28,24 +28,12 @@ public class Launcher { //주문, 결제 메소드 모음
 		System.out.println("메뉴를 선택하세요. ");
 		System.out.println("1. 커피 2. 스무디 3. 디저트 ");
 		int choiceMenu = scan.nextInt();
-		if (choiceMenu == 1) {
-			menu1.coffeemenu();
-			menu1.getcoffee();
-			menu1.ordercoffee();
-			menu1.ordershot();
-		}//커피 주문 완료 
-
-		if (choiceMenu == 2) {
-			menu1.smoothiemenu();
-			menu1.getsmoothie();
-			menu1.ordersmoothie();
-		}//스무디 주문 완료 
-
-		if (choiceMenu == 3) {
-			menu1.cakemenu();
-			menu1.getcake();
-			menu1.ordercake();
-		} //사이드 메뉴 주문 완료 
+		if (choiceMenu == 1) 
+			menu1.orderCoffee();//커피 주문 완료 
+		if (choiceMenu == 2) 
+			menu1.orderSmoothie();//스무디 주문 완료 
+		if (choiceMenu == 3) 
+			menu1.orderCake(); //사이드 메뉴 주문 완료 
 	}
 
 	public void payment() { //결제 
@@ -59,7 +47,8 @@ public class Launcher { //주문, 결제 메소드 모음
 
 	public void point() {
 		Member member = new Member();
-		member.setMember("hanna", 1234);
+		member.setId("hanna");
+		member.setPw(1234);
 		
 		for(;;) {
 			System.out.print("아이디를 입력하세요: ");
