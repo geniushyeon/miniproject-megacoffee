@@ -50,11 +50,6 @@ class Member { //회원 아이디 비번 설정
 	private String id;
 	private int pw;
 
-	public void setMember(String id, int pw) {
-		this.id = id;
-		this.pw = pw;
-	}
-
 	public String getId() {
 		return id;
 	}
@@ -79,7 +74,26 @@ public class Menu { //메뉴 추가, 출력
 	int stamp = 0; //스탬프
 	int shotplus = 500; //샷추가
 	int choicecount;
-
+	
+	public void orderCoffee() {
+		coffeemenu();
+		getcoffee();
+		ordercoffee();
+		ordershot();
+	}
+	
+	public void orderSmoothie() {
+		smoothiemenu();
+		getsmoothie();
+		ordersmoothie();
+	}
+	
+	public void orderCake() {
+		cakemenu();
+		getcake();
+		ordercake();
+	}
+	
 	public void coffeemenu() {//커피 배열에 메뉴 저장
 		coffee[0] = new Coffee("핫 아메리카노" , 1500);
 		coffee[1] = new Coffee("아이스아메리카노", 2000);
@@ -176,20 +190,14 @@ public class Menu { //메뉴 추가, 출력
 	public int getSum() {
 		return sum;//주문금액 받아옴
 	}
-	public void setSum(int sum) {
-		this.sum = sum;
-	}
 	public int getStamp() {
 		return stamp;//적립된 도장 받아옴
-	}
-	public void setStamp(int stamp) {
-		this.stamp = stamp;
 	}
 
 	public void receipt() {
 		System.out.println("\n주문 내역 ");
 		for (int i=0; i<list.size(); i++) {
-			System.out.println(list.get(i));
+			System.out.println((i+1) + ". " + list.get(i));
 		} //주문서 출력 
 		System.out.println("총 결제 금액:\t" + getSum() + "원 ");
 	}
