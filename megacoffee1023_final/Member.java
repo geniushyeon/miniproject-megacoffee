@@ -1,5 +1,5 @@
 
-public class Member { //È¸¿ø ¾ÆÀÌµğ ºñ¹ø ¼³Á¤
+public class Member { //íšŒì› ì•„ì´ë”” ë¹„ë²ˆ ì„¤ì •
 	private String id;
 	private int pw;
 
