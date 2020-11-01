@@ -76,6 +76,14 @@ public class Launcher { //주문, 결제 메소드 모음
 			}//아이디 불일치 
 		}//for(;;) - 회원 확인
 
+	}//point();
+
+	public void receipt() {
+		System.out.println("\n주문 내역 ");
+		for (int i=0; i<menu1.list.size(); i++) {
+			System.out.println((i+1) + ". " + menu1.list.get(i));
+		} //주문서 출력 
+		System.out.println("총 결제 금액:\t" + menu1.getSum() + "원 ");
 	}
 
 }
