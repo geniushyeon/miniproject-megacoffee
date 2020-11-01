@@ -177,12 +177,5 @@ public class Menu { //메뉴 추가, 출력
 		return stamp;//적립된 도장 받아옴
 	}
 
-	public void receipt() {
-		System.out.println("\n주문 내역 ");
-		for (int i=0; i<list.size(); i++) {
-			System.out.println((i+1) + ". " + list.get(i));
-		} //주문서 출력 
-		System.out.println("총 결제 금액:\t" + getSum() + "원 ");
-	}
 
 }
