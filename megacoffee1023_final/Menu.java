@@ -51,7 +51,7 @@ public class Menu { //메뉴 추가, 출력
 	Coffee[] coffee = new Coffee[4]; //커피 메뉴 담을 배열
 	Smoothie[] smoothie = new Smoothie[2];//스무디 메뉴 담을 배열
 	Cake[] cake = new Cake[2];//케이크 메뉴 담을 배열
-	ArrayList list = new ArrayList();//주문서 
+	ArrayList<String> list = new ArrayList<>();//주문서 
 
 	int sum = 0; //총 주문금액
 	int stamp = 0; //스탬프
