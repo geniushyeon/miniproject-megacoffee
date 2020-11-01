@@ -1,4 +1,4 @@
-public class Member { //회원 아이디 비번 설정
+public class Member {
 	private String id;
 	private int pw;
 
