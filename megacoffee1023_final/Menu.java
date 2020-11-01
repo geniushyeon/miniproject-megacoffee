@@ -46,23 +46,6 @@ class Cake {//케이크 메뉴, 가격
 
 }//class Cake
 
-class Member { //회원 아이디 비번 설정
-	private String id;
-	private int pw;
-
-	public String getId() {
-		return id;
-	}
-	public void setId(String id) {
-		this.id = id;
-	}
-	public int getPw() {
-		return pw;
-	}
-	public void setPw(int pw) {
-		this.pw = pw;
-	}
-}
 public class Menu { //메뉴 추가, 출력
 	Scanner scan = new Scanner(System.in);
 	Coffee[] coffee = new Coffee[4]; //커피 메뉴 담을 배열
