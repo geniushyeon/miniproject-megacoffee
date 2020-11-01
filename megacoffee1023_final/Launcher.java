@@ -3,7 +3,6 @@ import java.util.*;
 public class Launcher { //주문, 결제 메소드 모음
 	Scanner scan = new Scanner(System.in);
 	Menu menu1 = new Menu();
-	ArrayList list = new ArrayList();//주문서 
 
 	public Launcher() {//launcher 생성자 하나로 실행
 		menu();
@@ -17,9 +16,12 @@ public class Launcher { //주문, 결제 메소드 모음
 			if (choice == 1) { //주문
 				order();
 			}
-			if (choice == 2) { //결제(결제 메소드 부르기) 
+			else if (choice == 2) {
 				payment();
-				break; //결제 끝나면 for(;;) 탈출(프로그램 종료) 
+				break;
+			}
+			else
+				System.out.println("잘못 입력하였습니다. ");
 			}
 		}//for(;;)
 	}//public void menu()
