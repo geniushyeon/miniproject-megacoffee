@@ -1,6 +1,6 @@
 import java.util.*;
 
-class Coffee { //Ä¿ÇÇ ¸Ş´º, °¡°İ 
+class Coffee { //ì»¤í”¼ ë©”ë‰´, ê°€ê²© 
 	String menu;
 	int price;
 
@@ -10,11 +10,11 @@ class Coffee { //Ä¿ÇÇ ¸Ş´º, °¡°İ
 	}
 
 	public String toString() {
-		return menu +":\t" + price + "¿ø ";
+		return menu +":\t" + price + "ì› ";
 	}
 
 }//class Coffee
-class Smoothie {//½º¹«µğ ¸Ş´º, °¡°İ 
+class Smoothie {//ìŠ¤ë¬´ë”” ë©”ë‰´, ê°€ê²© 
 	String menu;
 	int price;
 
@@ -24,12 +24,12 @@ class Smoothie {//½º¹«µğ ¸Ş´º, °¡°İ
 	}
 
 	public String toString() {
-		return menu +":\t" + price + "¿ø ";
+		return menu +":\t" + price + "ì› ";
 	}
 
 }//class Smoothie
 
-class Cake {//ÄÉÀÌÅ© ¸Ş´º, °¡°İ 
+class Cake {//ì¼€ì´í¬ ë©”ë‰´, ê°€ê²© 
 	String menu;
 	int price;
 
@@ -40,21 +40,21 @@ class Cake {//ÄÉÀÌÅ© ¸Ş´º, °¡°İ
 	}
 
 	public String toString() {
-		return menu +":\t" + price + "¿ø ";
+		return menu +":\t" + price + "ì› ";
 	}
 
 }//class Cake
 
-public class Menu { //¸Ş´º Ãß°¡, Ãâ·Â
+public class Menu { //ë©”ë‰´ ì¶”ê°€, ì¶œë ¥
 	Scanner scan = new Scanner(System.in);
-	Coffee[] coffee = new Coffee[4]; //Ä¿ÇÇ ¸Ş´º ´ãÀ» ¹è¿­
-	Smoothie[] smoothie = new Smoothie[2];//½º¹«µğ ¸Ş´º ´ãÀ» ¹è¿­
-	Cake[] cake = new Cake[2];//ÄÉÀÌÅ© ¸Ş´º ´ãÀ» ¹è¿­
-	ArrayList<String> list = new ArrayList<>();//ÁÖ¹®¼­ 
+	Coffee[] coffee = new Coffee[4]; //ì»¤í”¼ ë©”ë‰´ ë‹´ì„ ë°°ì—´
+	Smoothie[] smoothie = new Smoothie[2];//ìŠ¤ë¬´ë”” ë©”ë‰´ ë‹´ì„ ë°°ì—´
+	Cake[] cake = new Cake[2];//ì¼€ì´í¬ ë©”ë‰´ ë‹´ì„ ë°°ì—´
+	List<String> list = new ArrayList<>();//ì£¼ë¬¸ì„œ 
 
-	int sum = 0; //ÃÑ ÁÖ¹®±İ¾×
-	int stamp = 0; //½ºÅÆÇÁ
-	int shotplus = 500; //¼¦Ãß°¡
+	int sum = 0; //ì´ ì£¼ë¬¸ê¸ˆì•¡
+	int stamp = 0; //ìŠ¤íƒ¬í”„
+	int shotplus = 500; //ìƒ·ì¶”ê°€
 	int choicecount;
 
 	public void orderCoffee() {
@@ -76,99 +76,99 @@ public class Menu { //¸Ş´º Ãß°¡, Ãâ·Â
 		ordercake();
 	}
 
-	public void coffeemenu() {//Ä¿ÇÇ ¹è¿­¿¡ ¸Ş´º ÀúÀå
-		coffee[0] = new Coffee("ÇÖ ¾Æ¸Ş¸®Ä«³ë" , 1500);
-		coffee[1] = new Coffee("¾ÆÀÌ½º¾Æ¸Ş¸®Ä«³ë", 2000);
-		coffee[2] = new Coffee("Ä«Æä  ¸ğÄ«", 2500);
-		coffee[3] = new Coffee("Ä«¶ó¸á ¸¶³¢¾Æ¶Ç", 3000);
+	public void coffeemenu() {//ì»¤í”¼ ë°°ì—´ì— ë©”ë‰´ ì €ì¥
+		coffee[0] = new Coffee("í•« ì•„ë©”ë¦¬ì¹´ë…¸" , 1500);
+		coffee[1] = new Coffee("ì•„ì´ìŠ¤ì•„ë©”ë¦¬ì¹´ë…¸", 2000);
+		coffee[2] = new Coffee("ì¹´í˜  ëª¨ì¹´", 2500);
+		coffee[3] = new Coffee("ì¹´ë¼ë©œ ë§ˆë¼ì•„ë˜", 3000);
 	}
 
-	public void getcoffee(){//Ä¿ÇÇ ¸Ş´º Ãâ·Â 
-		System.out.println("Ä¿ÇÇ ¸Ş´ºÀÔ´Ï´Ù. ");
+	public void getcoffee(){//ì»¤í”¼ ë©”ë‰´ ì¶œë ¥ 
+		System.out.println("ì»¤í”¼ ë©”ë‰´ì…ë‹ˆë‹¤. ");
 		for(int i=0; i<coffee.length; i++) {
 			System.out.println((i+1) + ". " + coffee[i].toString());
 		} 
 	}
 
-	public void smoothiemenu() {//½º¹«µğ ¹è¿­¿¡ ¸Ş´º ÀúÀå
-		smoothie[0] = new Smoothie("¿ä°ÅÆ® ½º¹«µğ", 3500);
-		smoothie[1] = new Smoothie("µş±â ½º¹«µğ", 4000);
+	public void smoothiemenu() {//ìŠ¤ë¬´ë”” ë°°ì—´ì— ë©”ë‰´ ì €ì¥
+		smoothie[0] = new Smoothie("ìš”ê±°íŠ¸ ìŠ¤ë¬´ë””", 3500);
+		smoothie[1] = new Smoothie("ë”¸ê¸° ìŠ¤ë¬´ë””", 4000);
 	}
 
-	public void getsmoothie() {//½º¹«µğ ¸Ş´º Ãâ·Â
-		System.out.println("½º¹«µğ ¸Ş´ºÀÔ´Ï´Ù. ");
+	public void getsmoothie() {//ìŠ¤ë¬´ë”” ë©”ë‰´ ì¶œë ¥
+		System.out.println("ìŠ¤ë¬´ë”” ë©”ë‰´ì…ë‹ˆë‹¤. ");
 		for(int i=0; i<smoothie.length; i++) {
 			System.out.println((i+1) + ". " + smoothie[i].toString());
-		} //½º¹«µğ ¸Ş´º Ãâ·Â 
+		} //ìŠ¤ë¬´ë”” ë©”ë‰´ ì¶œë ¥ 
 	}
 
-	public void cakemenu() {//»çÀÌµå ¹è¿­¿¡ ¸Ş´º ÀúÀå
-		cake[0] = new Cake("Ä¡Áî ÄÉÀÌÅ©", 5000);
-		cake[1] = new Cake("ÃÊÄÚ ÄÉÀÌÅ©", 5000);
+	public void cakemenu() {//ì‚¬ì´ë“œ ë°°ì—´ì— ë©”ë‰´ ì €ì¥
+		cake[0] = new Cake("ì¹˜ì¦ˆ ì¼€ì´í¬", 5000);
+		cake[1] = new Cake("ì´ˆì½” ì¼€ì´í¬", 5000);
 	}
 
-	public void getcake() {//»çÀÌµå ¸Ş´º Ãâ·Â
-		System.out.println("»çÀÌµå ¸Ş´ºÀÔ´Ï´Ù. ");
+	public void getcake() {//ì‚¬ì´ë“œ ë©”ë‰´ ì¶œë ¥
+		System.out.println("ì‚¬ì´ë“œ ë©”ë‰´ì…ë‹ˆë‹¤. ");
 		for(int i=0; i<cake.length; i++) {
 			System.out.println((i+1) + ". " + cake[i].toString());
-		} //»çÀÌµå ¸Ş´º Ãâ·Â 
+		} //ì‚¬ì´ë“œ ë©”ë‰´ ì¶œë ¥ 
 	}
 
-	public void ordercoffee() {//Ä¿ÇÇ ÁÖ¹®
+	public void ordercoffee() {//ì»¤í”¼ ì£¼ë¬¸
 		int choiceCoffee = scan.nextInt();
 		ordercount();
 		for(int i=0; i<choicecount; i++) {
 			list.add(coffee[choiceCoffee-1].toString());
-			sum += coffee[(choiceCoffee-1)].price;//ÇÕ°è¿¡ ´©ÀûÇÏ±â 
-			stamp++;//½ºÅÆÇÁ Ãß°¡ 
+			sum += coffee[(choiceCoffee-1)].price;//í•©ê³„ì— ëˆ„ì í•˜ê¸° 
+			stamp++;//ìŠ¤íƒ¬í”„ ì¶”ê°€ 
 		}
-		System.out.println(coffee[choiceCoffee-1].menu + "¸¦ " + choicecount + "ÀÜ ÁÖ¹®ÇÏ¼Ì½À´Ï´Ù.");
-	}//Ä¿ÇÇ ÁÖ¹®¿Ï·á
+		System.out.println(coffee[choiceCoffee-1].menu + "ë¥¼ " + choicecount + "ì” ì£¼ë¬¸í•˜ì…¨ìŠµë‹ˆë‹¤.");
+	}//ì»¤í”¼ ì£¼ë¬¸ì™„ë£Œ
 
-	public void ordershot() {//¼¦Ãß°¡ ?
-		System.out.println("¼¦À» Ãß°¡ÇÏ½Ã°Ú½À´Ï±î(500¿ø)?");
-		System.out.println("1. ¿¹ 2. ¾Æ´Ï¿À ");
+	public void ordershot() {//ìƒ·ì¶”ê°€ ?
+		System.out.println("ìƒ·ì„ ì¶”ê°€í•˜ì‹œê² ìŠµë‹ˆê¹Œ(500ì›)?");
+		System.out.println("1. ì˜ˆ 2. ì•„ë‹ˆì˜¤ ");
 		int choiceShot = scan.nextInt();
-		if (choiceShot == 1) {//¼¦Ãß°¡ 
+		if (choiceShot == 1) {//ìƒ·ì¶”ê°€ 
 			ordercount();
 			for(int i=0; i<choicecount; i++) {
-				list.add("- ¼¦ Ãß°¡:\t" + shotplus + "¿ø ");
+				list.add("- ìƒ· ì¶”ê°€:\t" + shotplus + "ì› ");
 				sum += shotplus;
 			}
-			System.out.println("¼¦À» " + choicecount+ "°³ Ãß°¡Çß½À´Ï´Ù. ");
+			System.out.println("ìƒ·ì„ " + choicecount+ "ê°œ ì¶”ê°€í–ˆìŠµë‹ˆë‹¤. ");
 
 		}
 	}
 
-	public void ordersmoothie() { //½º¹«µğ ÁÖ¹®
+	public void ordersmoothie() { //ìŠ¤ë¬´ë”” ì£¼ë¬¸
 		int choiceSmoothie = scan.nextInt();
 		ordercount();
 		for(int i=0; i<choicecount; i++) {
 			list.add(smoothie[choiceSmoothie-1].toString());
-			sum += smoothie[(choiceSmoothie-1)].price;//ÇÕ°è¿¡ ´©ÀûÇÏ±â 
+			sum += smoothie[(choiceSmoothie-1)].price;//í•©ê³„ì— ëˆ„ì í•˜ê¸° 
 		}
-		System.out.println(smoothie[choiceSmoothie-1].menu + "¸¦ " + choicecount + "ÀÜ ÁÖ¹®ÇÏ¼Ì½À´Ï´Ù.");
+		System.out.println(smoothie[choiceSmoothie-1].menu + "ë¥¼ " + choicecount + "ì” ì£¼ë¬¸í•˜ì…¨ìŠµë‹ˆë‹¤.");
 
-	}//½º¹«µğ ÁÖ¹®¿Ï·á
+	}//ìŠ¤ë¬´ë”” ì£¼ë¬¸ì™„ë£Œ
 
-	public void ordercake() {//»çÀÌµå ÁÖ¹®
+	public void ordercake() {//ì‚¬ì´ë“œ ì£¼ë¬¸
 		int choiceCake = scan.nextInt();
 		ordercount();
 		for(int i=0; i<choicecount; i++) {
 			list.add(cake[choiceCake-1].toString());
-			sum += cake[(choiceCake-1)].price;//ÇÕ°è¿¡ ´©ÀûÇÏ±â 
+			sum += cake[(choiceCake-1)].price;//í•©ê³„ì— ëˆ„ì í•˜ê¸° 
 		}
-		System.out.println(cake[choiceCake-1].menu + "¸¦ " + choicecount + "°³ ÁÖ¹®ÇÏ¼Ì½À´Ï´Ù.");
+		System.out.println(cake[choiceCake-1].menu + "ë¥¼ " + choicecount + "ê°œ ì£¼ë¬¸í•˜ì…¨ìŠµë‹ˆë‹¤.");
 
-	}//»çÀÌµå ÁÖ¹®¿Ï·á
+	}//ì‚¬ì´ë“œ ì£¼ë¬¸ì™„ë£Œ
 
 	public void ordercount() {
-		System.out.println("¼ö·®À» ÀÔ·ÂÇÏ¼¼¿ä.");
+		System.out.println("ìˆ˜ëŸ‰ì„ ì…ë ¥í•˜ì„¸ìš”.");
 		choicecount = scan.nextInt();
 	}
 
 	public int getStamp() {
-		return stamp;//Àû¸³µÈ µµÀå ¹Ş¾Æ¿È
+		return stamp;//ì ë¦½ëœ ë„ì¥ ë°›ì•„ì˜´
 	}
 
 }
